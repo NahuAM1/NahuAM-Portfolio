@@ -39,7 +39,7 @@ const NavBar = () => {
           setMenuOpen(!menuOpen);
         }}
       >
-        <IconButton icon={<MenuIcon />} />
+        <IconButton icon={<MenuIcon />} name="" href={null} />
       </div>
     </div>
   );
