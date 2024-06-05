@@ -3,25 +3,26 @@ import ButtonTemplate from "../ButtonTemplate/ButtonTemplate";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-const MailSender = () => {
-  const form = useRef();
+const MailSender: React.FC = () => {
+  const form = useRef<HTMLFormElement | null>(null);
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (form.current === null) return;
 
     emailjs
       .sendForm("service_5argm9a", "template_anvvinn", form.current, {
         publicKey: "JLjd2FkS-iPbgmfNr",
       })
       .then(
-        () => {
-          console.log("SUCCESS!");
+        (result) => {
+          console.log("SUCCESS!", result.text);
         },
         (error) => {
           console.log("FAILED...", error.text);
         }
       );
-    e.target.reset();
   };
 
   return (
