@@ -3,7 +3,7 @@ import ButtonTemplate from "../ButtonTemplate/ButtonTemplate";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-const MailSender = () => {
+const MailSender: React.FC = () => {
   const form = useRef<HTMLFormElement | null>(null);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
@@ -17,10 +17,10 @@ const MailSender = () => {
       })
       .then(
         (result) => {
-          console.log(result.text);
+          console.log("SUCCESS!", result.text);
         },
         (error) => {
-          console.log(error.text);
+          console.log("FAILED...", error.text);
         }
       );
   };
