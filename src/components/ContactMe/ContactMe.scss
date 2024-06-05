@@ -1,0 +1,68 @@
+@import "../../shared/styles-variables.scss";
+.contactMe-container{
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+    padding: 50px;
+
+    .contactMe-text-container{
+
+        .contactMe-title{
+            font-family: "Bebas Neue", sans-serif;
+            font-style: normal;
+            font-size: 60px;
+            color: $color3;
+        }
+        .contactMe-text{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            .contactMe-text-p{
+                font-family: "Inter";
+                color: $color3;
+            }
+            .contactMe-text-email{
+                font-family: "Inter";
+                color: $color3;
+                font-weight: 300;
+                text-decoration: underline;
+            }
+            
+        }
+    }
+    .contactMe-buttons{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+// Media queries for mobile devices
+@media (max-width: 767px) {
+    .contactMe-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+
+        .contactMe-text-container {
+            .contactMe-title {
+                font-size: 40px;
+            }
+
+            .contactMe-text {
+                flex-direction: column;
+                align-items: start;
+                .contactMe-text-p,
+                .contactMe-text-email {
+                    margin: 0px;
+                    font-size: 17px;
+                }
+            }
+        }
+
+        .contactMe-buttons {
+            margin-top: 20px;
+        }
+    }
+}

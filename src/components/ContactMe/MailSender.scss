@@ -1,0 +1,62 @@
+@import "../../shared/styles-variables.scss";
+.emailSender-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .emailSender-form-control{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 350px;
+        
+        .emailSender-form-input{
+            height: 30px;
+            border: none;
+            padding: 0px 10px 0px 10px;
+            border-radius: 8px;
+            background-color: $color6;
+            color: $color3;
+            font-family: "Inter";
+            font-weight: 300;
+            transition: 0.1s;
+
+            &:focus {
+                border: solid 2px;
+                border-color: $color2;
+                outline: none;
+            }
+        }
+
+
+        .emailSender-form-textarea{
+            border: none;
+            border-radius: 8px;
+            padding: 5px 10px 5px 10px;
+            background-color: $color6;
+            color: $color3;
+            font-family: "Inter";
+            font-weight: 300;
+            transition: 0.1s;
+            resize: none;
+
+            &:focus {
+                border: solid 2px;
+                border-color: $color2;
+                outline: none;
+            }
+        }
+    }
+}
+
+// Media queries for mobile devices
+@media (max-width: 767px) {
+    .emailSender-container {
+        .emailSender-form-control {
+            .emailSender-form-input,
+            .emailSender-form-textarea {
+                font-size: 16px; // Ajusta el tamaño de fuente para una mejor legibilidad en móviles
+                padding: 8px; // Añade padding para un mejor espaciado en móviles
+            }
+        }
+    }
+}

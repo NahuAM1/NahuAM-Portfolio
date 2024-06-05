@@ -1,0 +1,18 @@
+@import "../../shared/styles-variables.scss";
+
+.text-button-a {
+    .text-button-container {
+        display: flex;
+        align-items: center;
+        color: $color2;
+        font-weight: 600;
+        margin: 0px;
+        transition: 0.1s;
+        text-decoration: underline $color2;
+
+        &:hover{
+            color: $color1;
+            text-decoration: underline $color1;
+        }
+    }
+}

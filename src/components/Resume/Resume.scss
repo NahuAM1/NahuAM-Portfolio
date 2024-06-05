@@ -1,0 +1,64 @@
+@import "../../shared/styles-variables.scss";
+.resume-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .resume-text-container{
+        display: flex;
+        flex-direction: column;
+
+        .resume-greeting{
+            font-family: "Bebas Neue", sans-serif;
+            font-style: normal;
+            font-size: 80px;
+            width: 500px;
+            color: $color3;
+        }
+        .resume-text{
+            color: $color4;
+        }
+        .resume-buttons{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+
+    img{
+        height: 450px;
+        border-radius: 10px;
+        margin: 80px
+    }
+}
+// Media queries for mobile devices
+@media (max-width: 767px) {
+    .resume-container {
+        flex-direction: column;
+        padding: 20px;
+
+        img {
+            height: 400px;
+            margin: 10px;
+        }
+
+        .resume-text-container {
+
+            .resume-greeting {
+                font-size: 40px;
+                width: 300px;
+                margin: 10px 0;
+                text-align: left;
+            }
+
+            .resume-text {
+                font-weight: 300;
+                margin: 10px 0;
+            }
+
+            .resume-buttons {
+                margin: 20px 0;
+                gap: 10px;
+            }
+        }
+    }
+}
