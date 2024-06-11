@@ -1,7 +1,7 @@
 import "./ContactMe.scss";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import IconButton from "../IconButton/IconButton.tsx";
+import IconButton from "../../ui-components/IconButton/IconButton.tsx";
 import MailSender from "./MailSender.tsx";
 
 const ContactMe = () => {

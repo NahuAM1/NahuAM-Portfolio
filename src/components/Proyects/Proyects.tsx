@@ -7,7 +7,7 @@ const Proyects = () => {
         <div className="proyects-title">Proyectos Destacados</div>
         <p className="proyects-text">
           Estos son algunos de los proyectos seleccionados que muestran mi
-          pasión por el desarrollo.
+          compromiso y gusto por el desarrollo de software.
         </p>
       </div>
     </div>

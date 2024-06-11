@@ -2,8 +2,8 @@ import "./Resume.scss";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import image from "../../shared/media/IMG_0559-01.jpeg";
-import IconButton from "../IconButton/IconButton.tsx";
-import ButtonTemplate from "../ButtonTemplate/ButtonTemplate.tsx";
+import IconButton from "../../ui-components/IconButton/IconButton.tsx";
+import ButtonTemplate from "../../ui-components/ButtonTemplate/ButtonTemplate.tsx";
 const Resume = () => {
   const scrollToBottom = () => {
     window.scrollTo({

@@ -1,5 +1,5 @@
 import "./MailSender.scss";
-import ButtonTemplate from "../ButtonTemplate/ButtonTemplate";
+import ButtonTemplate from "../../ui-components/ButtonTemplate/ButtonTemplate";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 

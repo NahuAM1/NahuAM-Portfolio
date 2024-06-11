@@ -1,9 +1,9 @@
 import "./NavBar.scss";
-import ButtonTemplate from "../ButtonTemplate/ButtonTemplate";
+import ButtonTemplate from "../../ui-components/ButtonTemplate/ButtonTemplate.tsx";
 import MenuIcon from "@mui/icons-material/Menu";
 import Logo from "../../shared/media/Logo.png";
 import { Link } from "react-router-dom";
-import IconButton from "../IconButton/IconButton";
+import IconButton from "../../ui-components/IconButton/IconButton";
 import { useState } from "react";
 
 const NavBar = () => {

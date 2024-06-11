@@ -1,8 +1,8 @@
 import "./ResumeAbout.scss";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import IconButton from "../IconButton/IconButton.tsx";
-import ButtonTemplate from "../ButtonTemplate/ButtonTemplate.tsx";
+import IconButton from "../../ui-components/IconButton/IconButton.tsx";
+import ButtonTemplate from "../../ui-components/ButtonTemplate/ButtonTemplate.tsx";
 import CV from "../../shared/media/Curriculum Vitae - Manero Nahuel.pdf";
 const ResumeAbout = () => {
   return (

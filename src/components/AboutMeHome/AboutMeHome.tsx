@@ -1,4 +1,4 @@
-import TextButton from "../TextButton/TextButton";
+import TextButton from "../../ui-components/TextButton/TextButton";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import { Link } from "react-router-dom";
 import "./AboutMehome.scss";

@@ -11,12 +11,9 @@
     .name-container{
         position: absolute;
         display: flex;
-        left: 60px;
-
-
+        left: 40px;
         img{
-            height: 40px;
-            filter: invert(100%);
+            height: 50px;
             transition: 0.2s;
         }
         img:hover{
