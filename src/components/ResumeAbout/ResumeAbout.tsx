@@ -13,21 +13,17 @@ const ResumeAbout = () => {
           Dejame contarte un poco mas de mi:
         </p>
         <p className="resumeAbout-resume-text">
-          Soy estudiante de la carrera de Ingeniería en Sistema de Información,
-          Actualmente me encuentro cursando el ultimo año de la carrera.
-          <br></br>Mi principal enfoque es lograr un constante crecimiento,
-          tanto a nivel personal como profesional. Me considero una persona
-          dedicada a la formación continua, siempre buscando oportunidades para
-          ampliar mis habilidades y conocimientos en el ámbito tecnológico.
-          <br></br>Tengo conocimientos y formación en lenguajes de desarrollo
-          web y en metodologías ágiles. Poseo experiencia y formación sólida en
-          diversos lenguajes de desarrollo web, así como en la aplicación de
-          metodologías ágiles. <br></br>Mi objetivo es contribuir de manera
-          significativa al campo de la ingeniería de sistemas, aplicando mis
-          habilidades técnicas y mi capacidad para adaptarme a entornos
-          dinámicos. Estoy comprometido con mi desarrollo profesional y estoy
-          abierto a desafíos que me permitan seguir aprendiendo y evolucionando
-          en esta disciplina.
+          Soy una persona apasionada por el deporte, disfruto ver series y jugar
+          a videojuegos. Amo pasar tiempo al aire libre, practicando pádel y
+          artes marciales. Viajar es una de mis grandes pasiones, y mi mayor
+          sueño es vivir en algun lugar de la Patagonia y trabajar de forma
+          remota desde allí.
+          <br />
+          Me encantan los animales, la tecnología y siempre estoy al tanto de
+          las últimas innovaciones.
+          <br />
+          Valoro mucho pasar tiempo con mis amigos y mi familia, ya que esos
+          momentos compartidos son muy importantes para mí.
         </p>
         <div className="resumeAbout-buttons">
           <a

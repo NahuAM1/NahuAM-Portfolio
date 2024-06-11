@@ -1,5 +1,6 @@
 import TextButton from "../TextButton/TextButton";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
+import { Link } from "react-router-dom";
 import "./AboutMehome.scss";
 
 const AboutMeHome = () => {
@@ -27,11 +28,15 @@ const AboutMeHome = () => {
           abierto a desafíos que me permitan seguir aprendiendo y evolucionando
           en esta disciplina.
         </p>
-        <TextButton
-          href="/about"
-          text="Mas Acerca De Mi"
-          icon={<ArrowOutwardIcon />}
-        />
+
+        <Link to={"/about"}>
+          <TextButton
+            text="Mas Acerca De Mi"
+            icon={<ArrowOutwardIcon />}
+            href={null}
+            name=""
+          />
+        </Link>
       </div>
     </div>
   );

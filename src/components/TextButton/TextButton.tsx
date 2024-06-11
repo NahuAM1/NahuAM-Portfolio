@@ -1,21 +1,32 @@
 import "./TextButton.scss";
+import { Tooltip } from "@mui/material";
 
-interface IconButtonProps {
+interface TextButtonProps {
   icon: JSX.Element;
-  href: string;
+  href: string | null;
   text: string;
+  name: string;
 }
 
-const TextButton = ({ icon, href, text }: IconButtonProps) => {
+const TextButton = ({ icon, href, text, name }: TextButtonProps) => {
   return (
-    <>
-      <a className="text-button-a" href={href}>
-        <p className="text-button-container">
-          {text}
-          {icon}
-        </p>
-      </a>
-    </>
+    <Tooltip title={name}>
+      {href ? (
+        <a className="text-button-a" href={href}>
+          <p className="text-button-container">
+            {text}
+            {icon}
+          </p>
+        </a>
+      ) : (
+        <a className="text-button-a">
+          <p className="text-button-container">
+            {text}
+            {icon}
+          </p>
+        </a>
+      )}
+    </Tooltip>
   );
 };
 

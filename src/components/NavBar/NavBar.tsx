@@ -24,13 +24,28 @@ const NavBar = () => {
         }
       >
         <Link to={"/"} className="link">
-          <ButtonTemplate name="Inicio" />
+          <ButtonTemplate
+            name="Inicio"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          />
         </Link>
         <Link to={"/about"} className="link">
-          <ButtonTemplate name="Acerca de Mi" />
+          <ButtonTemplate
+            name="Acerca de Mi"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          />
         </Link>
         <Link to={"/contact"} className="link">
-          <ButtonTemplate name="Contactame" />
+          <ButtonTemplate
+            name="Contactame"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          />
         </Link>
       </div>
       <div
@@ -39,7 +54,7 @@ const NavBar = () => {
           setMenuOpen(!menuOpen);
         }}
       >
-        <IconButton icon={<MenuIcon />} name="" href={null} />
+        <IconButton icon={<MenuIcon />} href={null} name="" />
       </div>
     </div>
   );
