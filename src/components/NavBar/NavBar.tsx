@@ -12,7 +12,12 @@ const NavBar = () => {
   return (
     <div className="navbar-container">
       <div className="name-container">
-        <Link to={"/"}>
+        <Link
+          to={"/"}
+          onClick={() => {
+            setMenuOpen(false);
+          }}
+        >
           <img src={Logo} alt="" />
         </Link>
       </div>
