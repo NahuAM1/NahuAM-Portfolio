@@ -1,37 +1,40 @@
 import "./ProjectCard.scss";
-import CoffeeImg from "../../shared/media/CofeeProject.png";
 import TextButton from "../TextButton/TextButton";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { Project } from "../../shared/Projects.ts";
 
-const ProjectCard = () => {
+const ProjectCard = ({
+  name,
+  description,
+  image,
+  year,
+  role,
+  technologies,
+}: Project) => {
   return (
     <div className="project-card-container">
       <div className="project-card-image-container">
-        <img src={CoffeeImg} alt="" className="project-card-image" />
+        <img src={image} alt="" className="project-card-image" />
       </div>
       <div className="project-card-resume">
-        <p className="project-card-title">Cofee listing</p>
-        <p className="project-card-text">
-          Este projecto es un catalago de cafés el cual consume los datos de una
-          API y muestra los cafés populares, los puntajes dados por la gente,
-          los disponibes, etc.
-        </p>
+        <p className="project-card-title">{name}</p>
+        <p className="project-card-text">{description}</p>
         <div className="project-card-info-container">
           <div className="project-card-info-row">
             <p className="project-card-info">INFORMACIÓN DEL PROYECTO</p>
           </div>
           <div className="project-card-info-row">
             <p className="project-card-year">Año</p>
-            <p className="project-card-year-info">2024</p>
+            <p className="project-card-year-info">{year}</p>
           </div>
           <div className="project-card-info-row">
             <p className="project-card-rol">Rol en el proyecto</p>
-            <p className="project-card-rol-info">Desarrolador Front-End</p>
+            <p className="project-card-rol-info">{role}</p>
           </div>
           <div className="project-card-info-row">
             <p className="project-card-tech">Tecnologias</p>
-            <p className="project-card-tech-info">TypeScript, React, Sass</p>
+            <p className="project-card-tech-info">{technologies}</p>
           </div>
         </div>
         <div className="project-card-buttons">
