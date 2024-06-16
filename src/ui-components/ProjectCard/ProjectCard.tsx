@@ -19,7 +19,7 @@ const ProjectCard = () => {
         </p>
         <div className="project-card-info-container">
           <div className="project-card-info-row">
-            <p className="project-card-info">PROJECT INFO</p>
+            <p className="project-card-info">INFORMACIÓN DEL PROYECTO</p>
           </div>
           <div className="project-card-info-row">
             <p className="project-card-year">Año</p>
