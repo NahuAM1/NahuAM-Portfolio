@@ -1,5 +1,6 @@
 import ProjectCard from "../../ui-components/ProjectCard/ProjectCard";
 import "./Proyects.scss";
+import { projects, Project } from "../../shared/Projects.ts";
 
 const Projects = () => {
   return (
@@ -12,7 +13,16 @@ const Projects = () => {
         </p>
       </div>
       <div className="projects-cards-container">
-        <ProjectCard />
+        {projects.map((project: Project) => (
+          <ProjectCard
+            name={project.name}
+            description={project.description}
+            image={project.image}
+            year={project.year}
+            role={project.role}
+            technologies={project.technologies}
+          />
+        ))}
       </div>
     </div>
   );
