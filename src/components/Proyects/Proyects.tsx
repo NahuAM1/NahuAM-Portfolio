@@ -1,17 +1,21 @@
+import ProjectCard from "../../ui-components/ProjectCard/ProjectCard";
 import "./Proyects.scss";
 
-const Proyects = () => {
+const Projects = () => {
   return (
-    <div className="proyects-container">
-      <div className="proyects-text-container">
-        <div className="proyects-title">Proyectos Destacados</div>
-        <p className="proyects-text">
-          Estos son algunos de los proyectos seleccionados que muestran mi
+    <div className="projects-container">
+      <div className="projects-text-container">
+        <div className="projects-title">Projectos Destacados</div>
+        <p className="projects-text">
+          Estos son algunos de los projectos seleccionados que muestran mi
           compromiso y gusto por el desarrollo de software.
         </p>
+      </div>
+      <div className="projects-cards-container">
+        <ProjectCard />
       </div>
     </div>
   );
 };
 
-export default Proyects;
+export default Projects;

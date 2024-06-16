@@ -17,6 +17,7 @@ const Skills = () => {
           {skills.map((skill: Skill) => (
             <div className="skill-card">
               <p className="skill-card-name">{skill.name}</p>
+              <img src={skill.img} alt="" className="skill-card-img" />
             </div>
           ))}
         </div>

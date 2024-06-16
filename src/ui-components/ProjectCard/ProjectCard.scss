@@ -1,0 +1,129 @@
+@import "../../shared/styles-variables.scss";
+.project-card-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 50px;
+
+  .project-card-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 300px;
+    border-radius: 12px;
+    background-color: $color6;
+
+    .project-card-image {
+      height: 200px;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+  }
+  .project-card-resume {
+    display: flex;
+    flex-direction: column;
+    color: $color3;
+    font-family: "Inter";
+    gap: 10px;
+
+    .project-card-title {
+      font-weight: 600;
+      font-size: large;
+      margin: 0px;
+    }
+    .project-card-text {
+      font-weight: 300;
+      margin: 0px;
+      text-align: justify;
+    }
+    .project-card-info-container{
+      flex-direction: column;
+
+      .project-card-info-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0px 12px 0px;
+        border-bottom: solid 1px $color4;
+
+        .project-card-info,
+        .project-card-year,
+        .project-card-rol,
+        .project-card-tech,
+        .project-card-year-info,
+        .project-card-rol-info,
+        .project-card-tech-info{
+          margin: 0px;
+        }
+
+        .project-card-year,
+        .project-card-rol,
+        .project-card-tech{
+          font-weight: 300;
+        }
+
+        .project-card-info{
+          font-weight: 400;
+        }
+      }
+      
+    }
+  }
+  .project-card-buttons {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .project-card-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+    .project-card-image-container {
+      width: 100%;
+      height: auto;
+
+      .project-card-image {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .project-card-resume {
+      width: 100%;
+
+      .project-card-title {
+        font-size: 24px;
+      }
+
+      .project-card-text {
+        font-size: 16px;
+      }
+
+      .project-card-info-container {
+        .project-card-info-row {
+          display: flex;
+          justify-content: space-between;
+          padding: 8px 0;
+          .project-card-year,
+          .project-card-rol,
+          .project-card-tech{
+            font-weight: 400;
+        }
+
+        .project-card-info{
+          font-weight: 500;
+        }
+        }
+      }
+    }
+
+    .project-card-buttons {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
