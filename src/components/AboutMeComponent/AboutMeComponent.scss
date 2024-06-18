@@ -1,27 +1,27 @@
 @import "../../shared/styles-variables.scss";
-.aboutMeHome-container{
+.aboutMeComponent-container{
     display: flex;
     justify-content: center;
     padding: 0px 100px 0px 100px;
 
-    .aboutMeHome-title{
+    .aboutMeComponent-title{
         font-family: "Bebas Neue";
         font-style: normal;
         font-size: 80px;
         color: $color3;
     }
 
-    .aboutMeHome-resume{
+    .aboutMeComponent-resume{
         width: 500px;
         text-align: justify;
         font-family: "Inter";
         color: $color3;
         margin-left: 200px;
 
-        .aboutMeHome-resume-title{
+        .aboutMeComponent-resume-title{
             font-weight: 600;
         }
-        .aboutMeHome-resume-text{
+        .aboutMeComponent-resume-text{
             font-weight: 300;
         }
         
@@ -31,20 +31,20 @@
 
 // Media queries para dispositivos móviles
 @media (max-width: 767px) {
-    .aboutMeHome-container {
+    .aboutMeComponent-container {
         flex-direction: column;
         padding: 20px;
         align-items: start;
-        .aboutMeHome-title {
+        .aboutMeComponent-title {
             font-size: 40px;
         }
 
-        .aboutMeHome-resume {
+        .aboutMeComponent-resume {
             width: auto;
             margin-left: 0;
             text-align: justify;
 
-            .aboutMeHome-resume-title {
+            .aboutMeComponent-resume-title {
                 font-size: 20px;
             }
         }
