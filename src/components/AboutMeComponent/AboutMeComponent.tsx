@@ -1,17 +1,17 @@
 import TextButton from "../../ui-components/TextButton/TextButton";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import { Link } from "react-router-dom";
-import "./AboutMehome.scss";
+import "./AboutMeComponent.scss";
 
-const AboutMeHome = () => {
+const AboutMeComponent = () => {
   return (
-    <div className="aboutMeHome-container">
-      <div className="aboutMeHome-title">Acerca De Mi</div>
-      <div className="aboutMeHome-resume">
-        <p className="aboutMeHome-resume-title">
+    <div className="aboutMeComponent-container">
+      <div className="aboutMeComponent-title">Acerca De Mi</div>
+      <div className="aboutMeComponent-resume">
+        <p className="aboutMeComponent-resume-title">
           Dejame contarte un poco mas de mi:
         </p>
-        <p className="aboutMeHome-resume-text">
+        <p className="aboutMeComponent-resume-text">
           Soy estudiante de la carrera de Ingeniería en Sistema de Información,
           Actualmente me encuentro cursando el ultimo año de la carrera.
           <br></br>Mi principal enfoque es lograr un constante crecimiento,
@@ -42,4 +42,4 @@ const AboutMeHome = () => {
   );
 };
 
-export default AboutMeHome;
+export default AboutMeComponent;

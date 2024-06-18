@@ -1,0 +1,27 @@
+.topButton-container {
+    position: fixed;
+    bottom: 40px;
+    right: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.3s, visibility 0.3s;
+  
+    &.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+@media (max-width: 767px) {
+    .topButton-container{
+        bottom: 20px;
+    }
+}
+  

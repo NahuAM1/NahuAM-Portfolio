@@ -3,22 +3,25 @@ import "./IconButton.scss";
 
 interface IconButtonProps {
   icon: JSX.Element;
-  href: string | null;
+  href?: string | null;
   name: string;
+  onClick?: () => void;
 }
 
-function IconButton({ icon, href, name }: IconButtonProps) {
+const IconButton = ({ icon, href, name, onClick }: IconButtonProps) => {
+  const Wrapper = href ? "a" : "div";
   return (
     <Tooltip title={name}>
-      {href ? (
-        <a className="icon-button-a" href={href}>
-          <button className="icon-button-container">{icon}</button>
-        </a>
-      ) : (
+      <Wrapper
+        className="icon-button-a"
+        href={href || undefined}
+        onClick={onClick}
+        style={{ cursor: onClick ? "pointer" : "default" }}
+      >
         <button className="icon-button-container">{icon}</button>
-      )}
+      </Wrapper>
     </Tooltip>
   );
-}
+};
 
 export default IconButton;

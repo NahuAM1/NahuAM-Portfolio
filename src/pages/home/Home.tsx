@@ -1,7 +1,7 @@
 import "./Home.scss";
 import Resume from "../../components/Resume/Resume";
-import AboutMeHome from "../../components/AboutMeHome/AboutMeHome";
-import ContactMe from "../../components/ContactMe/ContactMe";
+import AboutMeHome from "../../components/AboutMeComponent/AboutMeComponent";
+import ContactMe from "../../components/ContactMeComponent/ContactMeComponent";
 import Projects from "../../components/Proyects/Proyects";
 
 const Home = () => {

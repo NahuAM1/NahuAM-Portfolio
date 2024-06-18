@@ -1,5 +1,5 @@
 import ResumeAbout from "../../components/ResumeAbout/ResumeAbout";
-import ContactMe from "../../components/ContactMe/ContactMe";
+import ContactMe from "../../components/ContactMeComponent/ContactMeComponent";
 import Skills from "../../components/Skills/Skills";
 
 const AboutMe = () => {
