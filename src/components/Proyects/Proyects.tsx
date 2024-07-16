@@ -1,18 +1,18 @@
-import ProjectCard from "../../ui-components/ProjectCard/ProjectCard";
-import "./Proyects.scss";
-import { projects, Project } from "../../shared/Projects.ts";
+import ProjectCard from '../../ui-components/ProjectCard/ProjectCard';
+import './Proyects.scss';
+import { projects, Project } from '../../shared/Projects.ts';
 
 const Projects = () => {
   return (
-    <div className="projects-container">
-      <div className="projects-text-container">
-        <div className="projects-title">Projectos Destacados</div>
-        <p className="projects-text">
+    <div className='projects-container'>
+      <div className='projects-text-container'>
+        <div className='projects-title'>Projectos Destacados</div>
+        <p className='projects-text'>
           Estos son algunos de los projectos seleccionados que muestran mi
           compromiso y gusto por el desarrollo de software.
         </p>
       </div>
-      <div className="projects-cards-container">
+      <div className='projects-cards-container'>
         {projects.map((project: Project) => (
           <ProjectCard
             name={project.name}
@@ -21,6 +21,8 @@ const Projects = () => {
             year={project.year}
             role={project.role}
             technologies={project.technologies}
+            demo={project.demo}
+            repository={project.repository}
           />
         ))}
       </div>
