@@ -15,6 +15,13 @@ const projects: Project[] = [
         year: "2024",
         role: "Desarrollador Front-End",
         technologies: "TypeScript, React, Sass",
+    },{
+        name: "Gym App",
+        description: "Este projecto es una aplicacion que permite la gestion de clientes, pases y empleados de un gimnasio",
+        image: "https://i.ibb.co/pWjv9jZ/Sin-t-tulo.png",
+        year: "2023",
+        role: "Desarrollador Full-Stack",
+        technologies: "JavaScript, React, Java-SpringBoot",
     },
 ]
 
