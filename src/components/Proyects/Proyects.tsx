@@ -6,7 +6,7 @@ const Projects = () => {
   return (
     <div className='projects-container'>
       <div className='projects-text-container'>
-        <div className='projects-title'>Projectos Destacados</div>
+        <div className='projects-title'>Proyectos Destacados</div>
         <p className='projects-text'>
           Estos son algunos de los projectos seleccionados que muestran mi
           compromiso y gusto por el desarrollo de software.
