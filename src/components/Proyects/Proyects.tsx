@@ -8,7 +8,7 @@ const Projects = () => {
       <div className='projects-text-container'>
         <div className='projects-title'>Proyectos Destacados</div>
         <p className='projects-text'>
-          Estos son algunos de los projectos seleccionados que muestran mi
+          Estos son algunos de los proyectos seleccionados que muestran mi
           compromiso y gusto por el desarrollo de software.
         </p>
       </div>
