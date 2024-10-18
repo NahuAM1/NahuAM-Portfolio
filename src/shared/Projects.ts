@@ -13,7 +13,7 @@ const projects: Project[] = [
   {
     name: 'Gestión de Modulo Sanitario (GMS)',
     description:
-      'Proyecto Final de la carreara Ingenieria en Sitemas de Informacion. Plataforma de gestión para la Organización Módulo Sanitario. Permite la planificación, análisis, asignación, construcción y control de módulos sanitarios para familias de bajos recursos de la ciudad de Córdoba. Incluyendo la generación de formularios, reportes, métricas para la toma de decisiones gestión de agenda y mapa interactivo.',
+      'Proyecto Final de la carrera de Ingenieria en Sitemas de Información. Plataforma de gestión para la Organización Módulo Sanitario. Permite la planificación, análisis, asignación, construcción y control de módulos sanitarios para familias de bajos recursos de la ciudad de Córdoba. Incluyendo la generación de formularios, reportes, métricas para la toma de decisiones gestión de agenda y mapa interactivo.',
     image: 'https://i.postimg.cc/pV3zSW-P2/Proyecto-GMS.png',
     year: '2024',
     role: 'Desarrollador Back-End y DevOps & Cloud',
