@@ -37,6 +37,12 @@ export interface Skill {
       img: "https://cdn-icons-png.freepik.com/512/5968/5968566.png",
     },
     {
+      name: "Nest JS",
+      description:
+        "Nest. js es un framework de desarrollo web basado en Node. js que utiliza TypeScript para proporcionar una estructura de programación sólida y altamente escalable.",
+      img: "https://www.svgrepo.com/show/306460/nestjs.svg",
+    },
+    {
       name: "HTML",
       description:
         "HTML es el lenguaje de marcado estándar para crear páginas web.",
