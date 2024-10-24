@@ -13,7 +13,7 @@ const projects: Project[] = [
   {
     name: 'Gestión de Modulo Sanitario (GMS)',
     description:
-      'Proyecto Final de la carrera de Ingenieria en Sitemas de Información. Plataforma de gestión para la Organización Módulo Sanitario. Permite la planificación, análisis, asignación, construcción y control de módulos sanitarios para familias de bajos recursos de la ciudad de Córdoba. Incluyendo la generación de formularios, reportes, métricas para la toma de decisiones gestión de agenda y mapa interactivo.',
+      'Proyecto Final de la carrera de Ingenieria en Sitemas de Información. Plataforma de gestión para la ONG Módulo Sanitario. Permite la planificación, análisis, asignación, construcción y control de módulos sanitarios para familias de bajos recursos de la ciudad de Córdoba. Incluyendo la generación de formularios, reportes, métricas para la toma de decisiones gestión de agenda y mapa interactivo.',
     image: 'https://i.postimg.cc/pV3zSW-P2/Proyecto-GMS.png',
     year: '2024',
     role: 'Desarrollador Back-End y DevOps & Cloud',
@@ -42,6 +42,17 @@ const projects: Project[] = [
     technologies: 'TypeScript, React, Sass',
     demo: 'https://simple-coffee-listing-pied.vercel.app',
     repository: 'https://github.com/NahuAM1/Simple-Coffee-Listing',
+  },
+  {
+    name: 'Portfolio Personal',
+    description:
+      'Por último, dejo el repositorio de este portafolio personal para observar la arquitectura del proyecto y las tecnologías.',
+    image: 'https://i.postimg.cc/7hy67Hxg/Sin-t-tulo.png',
+    year: '2024',
+    role: 'Desarrollador Front-End',
+    technologies: 'TypeScript, React, Vite, Sass, Vercel',
+    demo: '',
+    repository: 'https://github.com/NahuAM1/NahuAM-Portfolio',
   },
 ];
 
