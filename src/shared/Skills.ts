@@ -79,7 +79,7 @@ export interface Skill {
       img: "https://www.shareicon.net/download/2015/10/24/660964_database_512x512.png",
     },
     {
-      name: "SQL",
+      name: "Firebase",
       description:
         "Firebase es una plataforma de Google que ayuda a desarrollar aplicaciones web y móviles. Ofrece una infraestructura administrada, herramientas de asistencia de IA y SDK multiplataforma.",
       img:"https://static-00.iconduck.com/assets.00/firebase-icon-371x512-vqyog6a5.png",      
