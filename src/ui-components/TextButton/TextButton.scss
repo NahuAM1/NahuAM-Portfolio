@@ -16,4 +16,17 @@
             text-decoration: underline $color1;
         }
     }
+    .text-button-container-empty {
+        display: flex;
+        align-items: center;
+        color: $color7;
+        font-weight: 600;
+        margin: 0px;
+        transition: 0.1s;
+        gap: 5px;
+        text-decoration: underline $color7;
+        &:hover{
+            cursor: not-allowed;
+        }
+    }
 }

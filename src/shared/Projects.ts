@@ -5,8 +5,8 @@ export interface Project {
   year: string;
   role: string;
   technologies: string;
-  demo: string;
-  repository: string;
+  demo: string | null;
+  repository: string | null;
 }
 
 const projects: Project[] = [
@@ -18,8 +18,8 @@ const projects: Project[] = [
     year: '2024',
     role: 'Desarrollador Back-End y DevOps & Cloud',
     technologies: 'NestJS, React, Auth0, TypeScript, AWS y Github Actions',
-    demo: '',
-    repository: '',
+    demo: null,
+    repository: null,
   },
   {
     name: 'Gym App',
@@ -29,7 +29,7 @@ const projects: Project[] = [
     year: '2023',
     role: 'Desarrollador Full-Stack',
     technologies: 'JavaScript, React y Java-SpringBoot',
-    demo: '',
+    demo: null,
     repository: 'https://github.com/NahuAM1/gymapp',
   },
   {
@@ -51,7 +51,7 @@ const projects: Project[] = [
     year: '2024',
     role: 'Desarrollador Front-End',
     technologies: 'TypeScript, React, Vite, Sass y Vercel',
-    demo: '',
+    demo: null,
     repository: 'https://github.com/NahuAM1/NahuAM-Portfolio',
   },
 ];

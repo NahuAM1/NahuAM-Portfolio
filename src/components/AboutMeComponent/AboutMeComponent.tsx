@@ -1,17 +1,17 @@
-import TextButton from "../../ui-components/TextButton/TextButton";
-import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
-import { Link } from "react-router-dom";
-import "./AboutMeComponent.scss";
+import TextButton from '../../ui-components/TextButton/TextButton';
+import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import { Link } from 'react-router-dom';
+import './AboutMeComponent.scss';
 
 const AboutMeComponent = () => {
   return (
-    <div className="aboutMeComponent-container">
-      <div className="aboutMeComponent-title">Acerca De Mi</div>
-      <div className="aboutMeComponent-resume">
-        <p className="aboutMeComponent-resume-title">
+    <div className='aboutMeComponent-container'>
+      <div className='aboutMeComponent-title'>Acerca De Mi</div>
+      <div className='aboutMeComponent-resume'>
+        <p className='aboutMeComponent-resume-title'>
           Dejame contarte un poco mas de mi:
         </p>
-        <p className="aboutMeComponent-resume-text">
+        <p className='aboutMeComponent-resume-text'>
           Soy estudiante de la carrera de Ingeniería en Sistema de Información,
           Actualmente me encuentro cursando el ultimo año de la carrera.
           <br></br>Mi principal enfoque es lograr un constante crecimiento,
@@ -29,12 +29,12 @@ const AboutMeComponent = () => {
           en esta disciplina.
         </p>
 
-        <Link to={"/about"}>
+        <Link to={'/about'}>
           <TextButton
-            text="Mas Acerca De Mi"
+            text='Mas Acerca De Mi'
             icon={<ArrowOutwardIcon />}
-            href={null}
-            name=""
+            href={'/about'}
+            name=''
           />
         </Link>
       </div>
