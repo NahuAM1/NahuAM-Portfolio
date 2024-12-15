@@ -1,16 +1,17 @@
 @import "../../shared/styles-variables.scss";
-.projects-container {
+.experience-container {
   padding: 0px 100px 0px 100px;
 
-  .projects-text-container {
+  .experience-text-container {
     flex-direction: column;
-    .projects-title {
+    .experience-title {
+
       font-family: "Bebas Neue", sans-serif;
       font-style: normal;
       font-size: 80px;
       color: $color3;
     }
-    .projects-text {
+    .experience-text {
       text-align: justify;
       font-family: "Inter";
       font-size: large;
@@ -20,43 +21,41 @@
     }
     
   }
-  .projects-cards-container{
-  flex-direction: column;
-
+  .experience-cards-container{
+    flex-direction: column;
     gap: 10px;
-
   }
 }
 
 
 @media (min-width: 1300px) {
-  .projects-container {
+  .experience-container {
     padding: 0px 250px 0px 250px;
   }
 }
 
 @media (max-width: 767px) {
-  .projects-container {
+  .experience-container {
     flex-direction: column;
     padding: 20px;
 
-    .projects-text-container {
+    .experience-text-container {
       width: 300px;
 
-      .projects-title {
+      .experience-title {
         font-size: 40px;
         width: 300px;
         margin: 10px 0;
         text-align: left;
       }
 
-      .projects-text {
+      .experience-text {
         font-weight: 300;
         margin: 10px 0;
       }
     }
 
-    .projects-cards-container {
+    .experience-cards-container {
       flex-direction: column;
       gap: 10px;
     }

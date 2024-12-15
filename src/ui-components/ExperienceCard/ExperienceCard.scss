@@ -1,0 +1,121 @@
+@import "../../shared/styles-variables.scss";
+.experience-card-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 50px;
+  justify-content: space-between;
+
+  .experience-card-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 60px;
+    border-radius: 12px;
+    background-color: $color6;
+
+    .experience-card-image {
+      height: 200px;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+  }
+  .experience-card-resume {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    color: $color3;
+    font-family: "Inter";
+    gap: 10px;
+
+    .experience-card-title {
+      font-weight: 600;
+      font-size: large;
+      margin: 0px;
+    }
+    .experience-card-info-container{
+      flex-direction: column;
+
+      .experience-card-info-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0px 12px 0px;
+        border-bottom: solid 1px $color4;
+
+        .experience-card-info,
+        .experience-card-year,
+        .experience-card-rol,
+        .experience-card-tech,
+        .experience-card-year-info,
+        .experience-card-rol-info,
+        .experience-card-tech-info{
+          margin: 0px;
+        }
+
+        .experience-card-year,
+        .experience-card-rol,
+        .experience-card-tech{
+          font-weight: 300;
+        }
+
+        .experience-card-info{
+          font-weight: 400;
+        }
+      }
+      
+    }
+  }
+  .experience-card-buttons {
+    justify-content: flex-end;
+    display: flex;
+  }
+}
+
+@media (max-width: 767px) {
+  .experience-card-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .experience-card-image-container {
+      width: 30%;
+      height: auto;
+
+      .experience-card-image {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .experience-card-resume {
+      width: 100%;
+
+      .experience-card-title {
+        font-size: 24px;
+      }
+
+      .experience-card-info-container {
+        .experience-card-info-row {
+          display: flex;
+          justify-content: space-between;
+          padding: 8px 0;
+          .experience-card-year,
+          .experience-card-rol,
+          .experience-card-tech{
+            font-weight: 400;
+        }
+
+        .experience-card-info{
+          font-weight: 500;
+        }
+        }
+      }
+    }
+
+    .experience-card-buttons {
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+}
