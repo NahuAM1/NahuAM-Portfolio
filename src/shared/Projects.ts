@@ -32,7 +32,7 @@ const projects: Project[] = [
     demo: 'https://clickmenu.ai/en/landing',
     repository: null,
   },
-  {
+  /*{
     name: 'Gym App',
     description:
       'Este proyecto es una aplicacion que permite la gestion de clientes, pases y empleados de un gimnasio',
@@ -42,7 +42,7 @@ const projects: Project[] = [
     technologies: 'JavaScript, React y Java-SpringBoot',
     demo: null,
     repository: 'https://github.com/NahuAM1/gymapp',
-  },
+  },*/
   {
     name: 'Coffee Listing',
     description:
