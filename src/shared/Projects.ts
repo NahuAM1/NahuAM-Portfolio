@@ -25,7 +25,7 @@ const projects: Project[] = [
     name: 'Click Menu',
     description:
       'Click Menu fue un producto desarrollado para un cliente en Portugal en el que trabajé durante mis pasantías en Tech House. Mi trabajo en este proyecto incluyó la implementación del Servicio de Mailing para el soporte a usuarios, la creación y restablecimiento de cuentas, la Traducción de la Landing Page y diversas tareas de Desarrollo Front-End.',
-    image: 'https://clickmenu.ai/_next/static/media/logo.161b330e.svg',
+    image: 'https://i.postimg.cc/50TfZMgh/image.png',
     year: '2025',
     role: 'Desarrollador Front-End',
     technologies: 'NextJS, React, Tailwind, TypeScript',
