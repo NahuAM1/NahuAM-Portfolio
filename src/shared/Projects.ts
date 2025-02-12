@@ -22,6 +22,17 @@ const projects: Project[] = [
     repository: null,
   },
   {
+    name: 'Click Menu',
+    description:
+      'Click Menu fue un producto desarrollado para un cliente en Portugal en el que trabajé durante mis pasantías en Tech House. Mi trabajo en este proyecto incluyó la implementación del Servicio de Mailing para el soporte a usuarios, la creación y restablecimiento de cuentas, la Traducción de la Landing Page y diversas tareas de Desarrollo Front-End.',
+    image: 'https://clickmenu.ai/_next/static/media/logo.161b330e.svg',
+    year: '2025',
+    role: 'Desarrollador Front-End',
+    technologies: 'NextJS, React, Tailwind, TypeScript',
+    demo: 'https://clickmenu.ai/en/landing',
+    repository: null,
+  },
+  {
     name: 'Gym App',
     description:
       'Este proyecto es una aplicacion que permite la gestion de clientes, pases y empleados de un gimnasio',
