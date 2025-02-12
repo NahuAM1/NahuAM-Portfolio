@@ -27,7 +27,7 @@ export interface Skill {
       name: "JavaScript",
       description:
         "JavaScript es un lenguaje de programación que se utiliza principalmente para crear páginas web interactivas.",
-      img: "https://seeklogo.com/images/J/javascript-logo-F248CC9425-seeklogo.com.png",
+      img: "https://static-00.iconduck.com/assets.00/logo-js-icon-2048x2048-ptuzd8a3.png",
 
     },
     {
@@ -52,20 +52,26 @@ export interface Skill {
       name: "HTML",
       description:
         "HTML es el lenguaje de marcado estándar para crear páginas web.",
-      img: "https://seeklogo.com/images/H/html5-logo-0668063811-seeklogo.com.png",
+      img: "https://www.w3.org/html/logo/downloads/HTML5_1Color_Black.png",
     },
     {
       name: "CSS",
       description:
         "CSS es un lenguaje de diseño utilizado para estilizar la presentación de documentos HTML.",
-      img: "https://seeklogo.com/images/C/css3-logo-79B129E90E-seeklogo.com.png",
+      img: "https://brandslogos.com/wp-content/uploads/images/large/css-logo-black-and-white.png",
     },
     {
       name: "Sass",
       description:
         "Sass es una extensión de CSS que agrega características como variables, anidamiento y mixins, lo que facilita la escritura y mantenimiento de estilos CSS.",
       img: "https://cdn-icons-png.freepik.com/512/5968/5968550.png",
-    },  
+    },
+    {
+      name: "TailWind",
+      description:
+        "Tailwind CSS es un framework de CSS de código abierto que permite crear interfaces de usuario personalizadas. Se basa en clases de utilidad que se pueden combinar para dar estilo a los elementos.",
+      img: "https://static-00.iconduck.com/assets.00/tailwind-icon-2048x1233-8s7iwqun.png",
+    },
     {
       name: "React",
       description:
