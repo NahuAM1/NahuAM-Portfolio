@@ -1,0 +1,58 @@
+@import "../../shared/styles-variables.scss";
+
+.snackbar-backdrop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: auto;
+  max-width: 90%;
+  animation: fadeIn 0.3s ease-in-out;
+
+  .snackbar-container-error,
+  .snackbar-container-success {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 15px;
+    border-radius: 50px;
+    background-color: $color10;
+    .snackbar-icon{
+        padding: 0px;
+        margin: 0px;
+    }
+    .snackbar-text{
+        padding: 0px;
+        margin: 0px;
+        font-weight: bold;
+    }
+  }
+
+  .snackbar-container-error {
+    background-color: $color9;
+  }
+
+  .snackbar-container-success {
+    background-color: $color10;
+  }
+
+  .snackbar-icon {
+    margin-right: 8px;
+  }
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
