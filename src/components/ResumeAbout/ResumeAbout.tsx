@@ -4,7 +4,19 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import IconButton from '../../ui-components/IconButton/IconButton.tsx';
 import ButtonTemplate from '../../ui-components/ButtonTemplate/ButtonTemplate.tsx';
 import CV from '../../shared/media/Curriculum Vitae - Manero Nahuel.pdf';
+import { useState } from 'react';
+import SnackBar from '../../ui-components/SnackBar/SnackBar.tsx';
 const ResumeAbout = () => {
+  const [showSnackbar, setShowSnackbar] = useState(false);
+
+  const handleShowSnackBar = () => {
+    setShowSnackbar(true);
+
+    setTimeout(() => {
+      setShowSnackbar(false);
+    }, 5000);
+  };
+
   return (
     <div className='resumeAbout-container'>
       <div className='resumeAbout-title'>Acerca De Mi</div>
@@ -37,6 +49,7 @@ const ResumeAbout = () => {
             href={CV}
             download='Curriculum Vitae - Manero Nahuel.pdf'
             className='a'
+            onClick={handleShowSnackBar}
           >
             <ButtonTemplate name='Descarga mi CV' />
           </a>
@@ -52,6 +65,9 @@ const ResumeAbout = () => {
           />
         </div>
       </div>
+      {showSnackbar && (
+        <SnackBar text={'CV descargado con exito!'} severity={'success'} />
+      )}
     </div>
   );
 };
