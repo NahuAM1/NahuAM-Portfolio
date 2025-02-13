@@ -12,7 +12,12 @@ const TextButton = ({ icon, href, text, name }: TextButtonProps) => {
   return (
     <Tooltip title={name}>
       {href ? (
-        <a className='text-button-a' href={href}>
+        <a
+          className='text-button-a'
+          href={href}
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <p className='text-button-container'>
             {text}
             {icon}

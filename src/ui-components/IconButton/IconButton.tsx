@@ -1,5 +1,5 @@
-import { Tooltip } from "@mui/material";
-import "./IconButton.scss";
+import { Tooltip } from '@mui/material';
+import './IconButton.scss';
 
 interface IconButtonProps {
   icon: JSX.Element;
@@ -9,16 +9,18 @@ interface IconButtonProps {
 }
 
 const IconButton = ({ icon, href, name, onClick }: IconButtonProps) => {
-  const Wrapper = href ? "a" : "div";
+  const Wrapper = href ? 'a' : 'div';
   return (
     <Tooltip title={name}>
       <Wrapper
-        className="icon-button-a"
+        className='icon-button-a'
         href={href || undefined}
         onClick={onClick}
-        style={{ cursor: onClick ? "pointer" : "default" }}
+        style={{ cursor: onClick ? 'pointer' : 'default' }}
+        target='_blank'
+        rel='noopener noreferrer'
       >
-        <button className="icon-button-container">{icon}</button>
+        <button className='icon-button-container'>{icon}</button>
       </Wrapper>
     </Tooltip>
   );
