@@ -29,7 +29,7 @@ const projects: Project[] = [
     year: '2025',
     role: 'Desarrollador Front-End',
     technologies: 'NextJS, React, Tailwind, TypeScript, Firebase',
-    demo: 'https://clickmenu.ai/en/landing',
+    demo: 'https://clickmenu.ai',
     repository: null,
   },
   /*{
