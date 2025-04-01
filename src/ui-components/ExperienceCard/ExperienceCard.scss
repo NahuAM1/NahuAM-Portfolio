@@ -17,6 +17,7 @@
 
     .experience-card-image {
       height: 200px;
+      max-width: 100%;
       border-radius: 12px;
       cursor: pointer;
     }
@@ -86,6 +87,7 @@
       .experience-card-image {
         width: 100%;
         height: auto;
+        max-width: 200px;
       }
     }
 
