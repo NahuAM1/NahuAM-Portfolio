@@ -1,10 +1,12 @@
 import './ExperienceCard.scss';
 import TextButton from '../TextButton/TextButton';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import LanguageIcon from '@mui/icons-material/Language';
 
 interface ExperienceCardProps {
   name: string;
   linkedIn: string;
+  page: string;
   image: string;
   timeInit: string;
   timeEnd: string | null;
@@ -15,6 +17,7 @@ interface ExperienceCardProps {
 const ExperienceCard = ({
   name,
   linkedIn,
+  page,
   image,
   timeInit,
   timeEnd,
@@ -48,6 +51,12 @@ const ExperienceCard = ({
           </div>
         </div>
         <div className='experience-card-buttons'>
+          <TextButton
+            icon={<LanguageIcon />}
+            href={page}
+            text='PAGINA DE LA ORGANIZACION'
+            name=''
+          />
           <TextButton
             icon={<LinkedInIcon />}
             href={linkedIn}

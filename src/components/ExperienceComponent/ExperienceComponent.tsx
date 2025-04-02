@@ -1,6 +1,6 @@
 import './ExperienceComponent.scss';
-import { experience, Experience } from '../../shared/Experience';
 import ExperienceCard from '../../ui-components/ExperienceCard/ExperienceCard';
+import { Experience, experience } from '../../shared/Experience';
 
 const ExperienceComponent = () => {
   return (
@@ -18,6 +18,7 @@ const ExperienceComponent = () => {
           <ExperienceCard
             name={experience.name}
             linkedIn={experience.linkedIn}
+            page={experience.page}
             image={experience.image}
             timeInit={experience.timeInit}
             timeEnd={experience.timeEnd}
