@@ -81,7 +81,7 @@ const skills: Skill[] = [
     name: 'Vue',
     description:
       'Vue.js es un framework de JavaScript de código abierto que se utiliza para crear interfaces de usuario (UI) y aplicaciones web.',
-    img: 'https://brandslogos.com/wp-content/uploads/images/large/vue-logo-black-and-white.png',
+    img: 'https://static-00.iconduck.com/assets.00/vue-js-icon-512x440-bl2ifewb.png',
   },
   {
     name: 'SQL',
