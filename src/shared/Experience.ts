@@ -19,7 +19,7 @@ const experience: Experience[] = [
     timeInit: 'Abril 2025',
     timeEnd: null,
     role: 'Desarrollador Full-Stack',
-    technologies: 'Nest JS, TypeScript, React, AWS, Auth0',
+    technologies: 'Nest JS, TypeScript, React, Vue, AWS, Auth0',
   },
   {
     name: 'Tech House',
