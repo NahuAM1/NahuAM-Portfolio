@@ -32,17 +32,17 @@ const projects: Project[] = [
     demo: 'https://clickmenu.ai',
     repository: null,
   },
-  /*{
+  {
     name: 'Gym App',
     description:
-      'Este proyecto es una aplicacion que permite la gestion de clientes, pases y empleados de un gimnasio',
-    image: 'https://i.postimg.cc/DyXVsh1w/Sin-t-tulo.png',
-    year: '2023',
-    role: 'Desarrollador Full-Stack',
-    technologies: 'JavaScript, React y Java-SpringBoot',
-    demo: null,
-    repository: 'https://github.com/NahuAM1/gymapp',
-  },*/
+      'Quería destacar este proyecto principalmente porque está hecho en su gran mayoría con Ingeniería de Prompts y el servicio BaaS Supabase.',
+    image: 'https://i.postimg.cc/kg1vPYR6/Sin-t-tulo.png',
+    year: '2025',
+    role: 'Prompt Engineer',
+    technologies: 'v0.dev, ChatGPT, Supabase',
+    demo: "https://personal-finance-wallet.vercel.app",
+    repository: null,
+  },
   {
     name: 'Coffee Listing',
     description:
