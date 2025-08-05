@@ -33,7 +33,7 @@ const projects: Project[] = [
     repository: null,
   },
   {
-    name: 'Gym App',
+    name: 'Personal Wallet',
     description:
       'Quería destacar este proyecto principalmente porque está hecho en su gran mayoría con Ingeniería de Prompts y el servicio BaaS Supabase.',
     image: 'https://i.postimg.cc/kg1vPYR6/Sin-t-tulo.png',
