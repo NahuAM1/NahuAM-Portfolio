@@ -17,7 +17,7 @@ const Resume = () => {
       <div className="resume-text-container">
         <div className="resume-greeting">Hola, mi nombre es Nahuel Manero.</div>
         <p className="resume-text">
-          Estudiante | Desarrollador Web | Apasionado de la Tecnologia
+          Ingeniero en Sistemas de Información | Desarrollador Web | Apasionado de la Tecnologia
         </p>
         <div className="resume-buttons">
           <ButtonTemplate name="Contactame" onClick={scrollToBottom} />
