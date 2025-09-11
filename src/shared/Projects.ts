@@ -40,8 +40,8 @@ const projects: Project[] = [
     year: '2025',
     role: 'Prompt Engineer',
     technologies: 'v0.dev, ChatGPT, Supabase',
-    demo: "https://personal-finance-wallet.vercel.app",
-    repository: null,
+    demo: 'https://personal-finance-wallet.vercel.app',
+    repository: 'https://github.com/NahuAM1/personal-finance-app',
   },
   {
     name: 'Coffee Listing',
