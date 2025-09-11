@@ -12,8 +12,7 @@ const AboutMeComponent = () => {
           Dejame contarte un poco mas de mi:
         </p>
         <p className='aboutMeComponent-resume-text'>
-          Soy estudiante de la carrera de Ingeniería en Sistema de Información,
-          Actualmente me encuentro cursando el ultimo año de la carrera.
+          Soy Ingeniero en Sistema de Información.
           <br></br>Mi principal enfoque es lograr un constante crecimiento,
           tanto a nivel personal como profesional. Me considero una persona
           dedicada a la formación continua, siempre buscando oportunidades para

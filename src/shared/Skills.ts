@@ -78,6 +78,12 @@ const skills: Skill[] = [
     img: 'https://static-00.iconduck.com/assets.00/react-icon-2048x1822-iy7h2x8y.png',
   },
   {
+    name: 'Vue',
+    description:
+      'Vue.js es un framework de JavaScript de código abierto que se utiliza para crear interfaces de usuario (UI) y aplicaciones web.',
+    img: 'https://static-00.iconduck.com/assets.00/vue-js-icon-512x440-bl2ifewb.png',
+  },
+  {
     name: 'SQL',
     description:
       'SQL es un lenguaje utilizado para interactuar con bases de datos relacionales.',
