@@ -36,7 +36,7 @@ const projects: Project[] = [
     name: 'Personal Wallet',
     description:
       'Este proyecto nació como un experimento con v0.dev, una IA capaz de generar aplicaciones a partir de prompts. Inicialmente, la wallet funcionaba con datos hardcodeados, pero luego integré Supabase como BaaS para gestionar usuarios, transacciones y autenticación en tiempo real. En menos de una hora logré tener un prototipo funcional, escalable y multi-dispositivo, casi sin escribir código manualmente. La experiencia demuestra el potencial del prompt engineering combinado con herramientas inteligentes para crear productos reales de forma rápida y eficiente.',
-    image: 'https://i.postimg.cc/kg1vPYR6/Sin-t-tulo.png',
+    image: 'https://i.postimg.cc/QtNKYzwg/Sin-titulo.png',
     year: '2025',
     role: 'Prompt Engineer',
     technologies: 'v0.dev, ChatGPT, Supabase',
