@@ -18,7 +18,7 @@ const projects: Project[] = [
     year: '2024',
     role: 'Desarrollador Back-End y DevOps & Cloud',
     technologies: 'NestJS, React, Auth0, TypeScript, AWS y Github Actions',
-    demo: null,
+    demo: 'https://gmscordoba.com.ar/',
     repository: null,
   },
   {
