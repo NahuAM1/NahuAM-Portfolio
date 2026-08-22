@@ -3,10 +3,31 @@ import ButtonTemplate from '../../ui-components/ButtonTemplate/ButtonTemplate';
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import SnackBar from '../../ui-components/SnackBar/SnackBar';
+import { CONTACT_EMAIL } from '../../shared/contact';
 
-const SERVICE_ID = 'service_afu12kv';
+const SERVICE_ID = 'service_f92eamr';
 const TEMPLATE_ID = 'template_anvvinn';
 const PUBLIC_KEY = 'JLjd2FkS-iPbgmfNr';
+
+/** Builds a mailto that carries whatever the visitor already typed. */
+const buildMailtoFallback = (form: HTMLFormElement): string => {
+  const data = new FormData(form);
+  const read = (field: string): string => {
+    const value = data.get(field);
+    return typeof value === 'string' ? value : '';
+  };
+
+  const subject = read('subject') || 'Contacto desde el portfolio';
+  const body = [
+    read('message'),
+    '',
+    `— ${read('user_name')} (${read('user_email')})`,
+  ].join('\n');
+
+  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(body)}`;
+};
 
 const MailSender: React.FC = () => {
   const form = useRef<HTMLFormElement | null>(null);
@@ -16,6 +37,7 @@ const MailSender: React.FC = () => {
   );
   const [snackBarText, setSnackBarText] = useState('');
   const [sending, setSending] = useState(false);
+  const [fallbackHref, setFallbackHref] = useState<string | null>(null);
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -23,6 +45,7 @@ const MailSender: React.FC = () => {
     if (form.current === null || sending) return;
 
     setSending(true);
+    setFallbackHref(null);
 
     try {
       await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
@@ -37,7 +60,11 @@ const MailSender: React.FC = () => {
       const detail = error instanceof Error ? error.message : String(error);
       console.error('Email send failed:', detail);
       setSnackBarType('error');
-      setSnackBarText('Error al enviar el email!');
+      setSnackBarText('No se pudo enviar el mensaje');
+      // The provider can fail for reasons outside this page — an expired
+      // Gmail grant, a quota, an outage. Offer a mailto carrying what was
+      // already typed so a failed send never costs the message.
+      setFallbackHref(buildMailtoFallback(form.current));
     } finally {
       setSending(false);
     }
@@ -123,6 +150,18 @@ const MailSender: React.FC = () => {
             type='submit'
             disabled={sending}
           />
+
+          {fallbackHref && (
+            <div className='emailSender-fallback' role='alert'>
+              <p className='emailSender-fallback-text'>
+                El envío automático no está disponible en este momento. Podés
+                escribirme directamente y tu mensaje ya viaja redactado.
+              </p>
+              <a className='emailSender-fallback-link' href={fallbackHref}>
+                Abrir mi correo y enviarlo a {CONTACT_EMAIL}
+              </a>
+            </div>
+          )}
         </form>
       </div>
       {showSnackbar && snackBarType && (

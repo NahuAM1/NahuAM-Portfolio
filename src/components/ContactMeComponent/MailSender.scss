@@ -84,3 +84,42 @@
   width: 100%;
   margin-top: $space-2;
 }
+
+// Shown only when the provider rejects the send. Keeps the visitor's
+// message reachable instead of ending at "no se pudo enviar".
+.emailSender-fallback {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+    margin-top: $space-2;
+    padding: $space-4;
+    background-color: rgba(255, 105, 97, 0.08);
+    border: 1px solid rgba(255, 105, 97, 0.32);
+    border-radius: $radius-md;
+}
+
+.emailSender-fallback-text {
+    margin: 0;
+    font-family: $family-body;
+    font-size: $font-small;
+    font-weight: 300;
+    line-height: 1.6;
+    color: $text-secondary;
+}
+
+.emailSender-fallback-link {
+    align-self: flex-start;
+    font-family: $family-body;
+    font-size: $font-small;
+    font-weight: 600;
+    color: $accent;
+    text-decoration: none;
+    border-bottom: 1px solid $border-accent;
+    transition: color $duration-fast $ease-out, border-color $duration-fast $ease-out;
+    @include focus-ring;
+
+    &:hover {
+        color: $accent-strong;
+        border-bottom-color: $accent;
+    }
+}
