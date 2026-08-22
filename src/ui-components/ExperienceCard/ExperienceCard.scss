@@ -1,124 +1,150 @@
 @import "../../shared/styles-variables.scss";
-.experience-card-container {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: 50px;
-  margin-bottom: 50px;
-  justify-content: space-between;
 
-  .experience-card-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 60px;
-    border-radius: 12px;
-    background-color: $color6;
+.experience-card {
+  @include surface($radius-lg);
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  align-items: start;
+  gap: clamp($space-4, 3vw, $space-6);
+  padding: clamp($space-4, 3vw, $space-6);
 
-    .experience-card-image {
-      height: auto;
-      max-width: 150px;
-      border-radius: 12px;
-      cursor: pointer;
-    }
-  }
-  .experience-card-resume {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    color: $color3;
-    font-family: "Inter";
-    gap: 10px;
-
-    .experience-card-title {
-      font-weight: 600;
-      font-size: large;
-      margin: 0px;
-    }
-    .experience-card-info-container{
-      flex-direction: column;
-
-      .experience-card-info-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 12px 0px 12px 0px;
-        border-bottom: solid 1px $color4;
-
-        .experience-card-info,
-        .experience-card-year,
-        .experience-card-rol,
-        .experience-card-tech,
-        .experience-card-year-info,
-        .experience-card-rol-info,
-        .experience-card-tech-info{
-          margin: 0px;
-        }
-
-        .experience-card-year,
-        .experience-card-rol,
-        .experience-card-tech{
-          font-weight: 300;
-        }
-
-        .experience-card-info{
-          font-weight: 400;
-        }
-      }
-      
-    }
-  }
-  .experience-card-buttons {
-    justify-content: space-between;
-    display: flex;
+  &:hover {
+    background-color: $surface-hover;
+    border-color: $border-strong;
   }
 }
 
-@media (max-width: 767px) {
-  .experience-card-container {
+.experience-card-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  padding: $space-3;
+  background-color: $bg-elevated;
+  border: 1px solid $border;
+  border-radius: $radius-md;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: $radius-sm;
+  }
+}
+
+.experience-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+  min-width: 0;
+}
+
+.experience-card-heading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: $space-3;
+}
+
+.experience-card-title {
+  font-family: $family-body;
+  font-size: $font-h3;
+  font-weight: 600;
+  line-height: 1.2;
+  color: $text-primary;
+  margin: 0;
+}
+
+// Marks the current role at a glance, which a plain "Actualidad"
+// end-date buried in the period line does not.
+.experience-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  padding: $space-1 $space-3;
+  font-size: $font-eyebrow;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $accent;
+  background-color: rgba(211, 233, 122, 0.1);
+  border: 1px solid $border-accent;
+  border-radius: $radius-pill;
+}
+
+.experience-card-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: $accent;
+}
+
+.experience-card-role {
+  font-family: $family-body;
+  font-size: $font-body;
+  font-weight: 500;
+  color: $text-primary;
+  margin: 0;
+}
+
+.experience-card-period {
+  font-family: $family-body;
+  font-size: $font-small;
+  font-weight: 300;
+  color: $text-muted;
+  margin: 0;
+}
+
+// Technologies arrive as one comma-separated string and are split
+// into chips, which scan far faster than a run-on sentence.
+.experience-card-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+  list-style: none;
+  padding: 0;
+  margin: $space-2 0 0;
+
+  li {
+    padding: $space-1 $space-3;
+    font-size: $font-eyebrow;
+    font-weight: 500;
+    color: $text-secondary;
+    background-color: $surface;
+    border: 1px solid $border;
+    border-radius: $radius-pill;
+    transition: color $duration-fast $ease-out,
+      border-color $duration-fast $ease-out;
+  }
+}
+
+.experience-card:hover .experience-card-tech li {
+  border-color: $border-strong;
+}
+
+.experience-card-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: $space-6;
+  margin-top: $space-4;
+}
+
+@include mobile {
+  .experience-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .experience-card-logo {
+    width: 72px;
+    height: 72px;
+  }
+
+  .experience-card-actions {
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
-
-    .experience-card-image-container {
-      width: 30%;
-      height: auto;
-
-      .experience-card-image {
-        width: 100%;
-        height: auto;
-        max-width: 200px;
-      }
-    }
-
-    .experience-card-resume {
-      width: 100%;
-
-      .experience-card-title {
-        font-size: 24px;
-      }
-
-      .experience-card-info-container {
-        .experience-card-info-row {
-          display: flex;
-          justify-content: space-between;
-          padding: 8px 0;
-          .experience-card-year,
-          .experience-card-rol,
-          .experience-card-tech{
-            font-weight: 400;
-        }
-
-        .experience-card-info{
-          font-weight: 500;
-        }
-        }
-      }
-    }
-
-    .experience-card-buttons {
-      justify-content: space-between;
-      width: 100%;
-    }
+    align-items: flex-start;
+    gap: $space-3;
   }
 }

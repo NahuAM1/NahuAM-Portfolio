@@ -1,66 +1,166 @@
 @import "../../shared/styles-variables.scss";
-.resume-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0px 100px 0px 100px;
 
-    .resume-text-container{
-        display: flex;
-        flex-direction: column;
-
-        .resume-greeting{
-            font-family: "Bebas Neue", sans-serif;
-            font-style: normal;
-            font-size: 80px;
-            width: 500px;
-            color: $color3;
-        }
-        .resume-text{
-            color: $color4;
-        }
-        .resume-buttons{
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-    }
-
-    img{
-        height: 450px;
-        border-radius: 10px;
-        margin: 80px
-    }
+.resume-container {
+  @include container;
+  position: relative;
+  display: grid;
+  // Text column is wider than the portrait: the message leads,
+  // the photo supports it.
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: center;
+  gap: clamp($space-6, 6vw, $space-9);
+  padding-block: clamp($space-8, 9vw, $space-10);
+  min-height: calc(100svh - #{$nav-height});
 }
-// Media queries for mobile devices
-@media (max-width: 767px) {
-    .resume-container {
-        flex-direction: column;
-        padding: 20px;
 
-        img {
-            height: 400px;
-            margin: 10px;
-        }
+// Violet bloom behind the headline. Sits in its own layer so it
+// never affects the text it lights.
+.resume-glow {
+  position: absolute;
+  top: -10%;
+  left: -15%;
+  width: min(760px, 90%);
+  aspect-ratio: 1;
+  background: radial-gradient(
+    circle,
+    rgba(69, 21, 153, 0.42) 0%,
+    rgba(69, 21, 153, 0.14) 42%,
+    transparent 70%
+  );
+  filter: blur(30px);
+  pointer-events: none;
+  z-index: -1;
+}
 
-        .resume-text-container {
+.resume-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $space-5;
+  animation: resume-rise $duration-slow $ease-out both;
+}
 
-            .resume-greeting {
-                font-size: 40px;
-                width: 300px;
-                margin: 10px 0;
-                text-align: left;
-            }
+.resume-eyebrow {
+  @include eyebrow;
+  margin: 0;
+  padding: $space-2 $space-4;
+  background-color: $surface;
+  border: 1px solid $border;
+  border-radius: $radius-pill;
+  color: $text-secondary;
+}
 
-            .resume-text {
-                font-weight: 300;
-                margin: 10px 0;
-            }
+.resume-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: $accent;
+  box-shadow: 0 0 0 0 rgba(211, 233, 122, 0.7);
+  animation: resume-pulse 2.4s $ease-in-out infinite;
+}
 
-            .resume-buttons {
-                margin: 20px 0;
-                gap: 10px;
-            }
-        }
-    }
+.resume-greeting {
+  font-family: $family-display;
+  font-size: $font-display;
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: 0.01em;
+  color: $text-primary;
+  margin: 0;
+  // Replaces the old fixed `width: 500px`, which forced the same
+  // line length on every screen size.
+  max-width: 15ch;
+  text-wrap: balance;
+
+  span {
+    background: linear-gradient(120deg, $accent 0%, $accent-strong 60%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+.resume-text {
+  @include body-text;
+  font-size: $font-body-lg;
+  max-width: 46ch;
+  margin: 0;
+}
+
+.resume-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: $space-3;
+  margin-top: $space-2;
+}
+
+.resume-image-container {
+  position: relative;
+  justify-self: end;
+  width: 100%;
+  max-width: 420px;
+  animation: resume-rise $duration-slow $ease-out 0.12s both;
+
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: $radius-xl;
+    border: 1px solid $border;
+    // Layered shadow reads as depth; a single flat shadow reads as a sticker.
+    box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.9),
+      0 0 90px -40px rgba(69, 21, 153, 0.7);
+  }
+}
+
+@keyframes resume-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes resume-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(211, 233, 122, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(211, 233, 122, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(211, 233, 122, 0);
+  }
+}
+
+// Single column well before the old 767px cliff: the two-column
+// hero starts crowding around the 900px mark.
+@media (max-width: 900px) {
+  .resume-container {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: start;
+    min-height: 0;
+    padding-block: $space-8 $space-7;
+  }
+
+  .resume-greeting {
+    max-width: 100%;
+  }
+
+  .resume-image-container {
+    justify-self: center;
+    max-width: 320px;
+    order: -1;
+  }
+}
+
+@include mobile {
+  .resume-image-container {
+    max-width: 260px;
+  }
 }

@@ -1,0 +1,116 @@
+@import "../../shared/styles-variables.scss";
+
+.education-container {
+  @include section;
+}
+
+.education-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: clamp($space-5, 3vw, $space-6);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  // Vertical rail running behind the icons, so the entries read as a
+  // timeline rather than three unrelated cards.
+  &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 21px;
+    width: 1px;
+    background: linear-gradient(
+      to bottom,
+      $border-accent,
+      $border 40%,
+      transparent
+    );
+  }
+}
+
+.education-item {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  align-items: start;
+  gap: $space-4;
+}
+
+.education-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: $accent;
+  // Opaque so the rail behind it does not show through the circle.
+  background-color: $bg-elevated;
+  border: 1px solid $border-accent;
+  border-radius: 50%;
+
+  svg {
+    font-size: 20px;
+  }
+}
+
+.education-body {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+  padding-top: $space-2;
+  min-width: 0;
+}
+
+.education-heading {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: $space-3;
+}
+
+.education-title {
+  font-family: $family-body;
+  font-size: $font-h3;
+  font-weight: 600;
+  line-height: 1.25;
+  color: $text-primary;
+  margin: 0;
+}
+
+.education-period {
+  font-family: $family-body;
+  font-size: $font-eyebrow;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $accent;
+  white-space: nowrap;
+}
+
+.education-institution {
+  font-family: $family-body;
+  font-size: $font-small;
+  font-weight: 500;
+  color: $text-secondary;
+  margin: 0;
+}
+
+.education-detail {
+  @include body-text;
+  font-size: $font-small;
+  max-width: 70ch;
+  margin: 0;
+}
+
+@include mobile {
+  .education-list::before {
+    display: none;
+  }
+
+  .education-item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: $space-3;
+  }
+}

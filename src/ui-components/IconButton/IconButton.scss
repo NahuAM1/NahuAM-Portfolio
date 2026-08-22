@@ -1,47 +1,46 @@
 @import "../../shared/styles-variables.scss";
-.icon-button-a{
-    width: 30px;
-    height: 30px;
-    border-radius: 30px;
-}
-.icon-button-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 30px;
-    background-color: $buttonBackgroundColor;
-    color: $color5;
-    border: none;
-    transition: 0.1s;
-    cursor: pointer;
-}
 
-.icon-button-container:hover{
-    background-color: $buttonBackgroundColorHover;
-    color: $color2;
-}
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  // 44px is the minimum comfortable touch target (WCAG 2.5.5).
+  // The previous 30px missed it on every device.
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  color: $text-secondary;
+  background-color: $surface;
+  border: 1px solid $border;
+  border-radius: $radius-md;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color $duration-fast $ease-out,
+    background-color $duration-fast $ease-out,
+    border-color $duration-fast $ease-out, transform $duration-fast $ease-out;
+  @include focus-ring;
 
-.icon-button-container:active{
-    background-color: $buttonBackgroundColorActive;
-    color: $color2;
-}
+  svg {
+    font-size: 20px;
+  }
 
-.icon-button-container:disabled{
-    background-color: $buttonBackgroundColorDisable;
-}
+  // Ghost by default so the lime accent stays reserved for the one
+  // primary CTA on the screen.
+  &:hover {
+    color: $accent;
+    background-color: $surface-hover;
+    border-color: $border-accent;
+    transform: translateY(-2px);
+  }
 
-// Media queries for mobile devices
-@media (max-width: 767px) { 
-    .icon-button-a{
-        width: 40px;
-        height: 40px;
-        border-radius: 40px;
-    }
-    .icon-button-container{
-        width: 40px;
-        height: 40px;
-        border-radius: 40px;
-    }
+  &:active {
+    transform: translateY(0);
+    background-color: $surface-strong;
+  }
+
+  &:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+  }
 }

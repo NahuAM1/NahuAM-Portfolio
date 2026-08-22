@@ -9,30 +9,31 @@ interface TextButtonProps {
 }
 
 const TextButton = ({ icon, href, text, name }: TextButtonProps) => {
-  return (
-    <Tooltip title={name}>
-      {href ? (
-        <a
-          className='text-button-a'
-          href={href}
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <p className='text-button-container'>
-            {text}
-            {icon}
-          </p>
-        </a>
-      ) : (
-        <a className='text-button-a'>
-          <p className='text-button-container-empty'>
-            {text}
-            {icon}
-          </p>
-        </a>
-      )}
-    </Tooltip>
+  // Without an href there is nothing to navigate to, so this renders as
+  // a plain span. An <a> with no href is not focusable and announces as
+  // a link that goes nowhere.
+  if (!href) {
+    return (
+      <span className="text-button text-button--disabled" aria-disabled="true">
+        {text}
+        {icon}
+      </span>
+    );
+  }
+
+  const link = (
+    <a
+      className="text-button"
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {text}
+      {icon}
+    </a>
   );
+
+  return name ? <Tooltip title={name}>{link}</Tooltip> : link;
 };
 
 export default TextButton;

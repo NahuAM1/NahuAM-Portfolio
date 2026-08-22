@@ -1,19 +1,54 @@
 <!doctype html>
-<html lang="en">
+<!-- lang was "en" while every word on the page is Spanish, which misleads
+     search engines and makes screen readers apply English phonetics. -->
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./src/shared/media/Logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NahuAM Portfolio</title>
+
+    <title>Nahuel Manero | Ingeniero en Sistemas de Información</title>
+    <meta
+      name="description"
+      content="Portfolio de Nahuel Manero, Ingeniero en Sistemas de Información. Desarrollo de aplicaciones completas, automatización de procesos y optimización de sistemas con NestJS, React, Vue, Java y AWS."
+    />
+    <meta name="author" content="Nahuel Manero" />
+    <meta name="theme-color" content="#080808" />
+
+    <!-- 32px icon instead of the 8538x5974 source PNG, which weighed
+         870 KB and was declared as image/svg+xml. -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Link preview card for LinkedIn, WhatsApp and X. Without these the
+         shared link renders as a bare URL. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Nahuel Manero" />
+    <meta
+      property="og:title"
+      content="Nahuel Manero | Ingeniero en Sistemas de Información"
+    />
+    <meta
+      property="og:description"
+      content="Desarrollo de aplicaciones completas, automatización de procesos y optimización de sistemas."
+    />
+    <meta property="og:url" content="https://nahuelmanero.vercel.app/" />
+    <meta property="og:image" content="https://nahuelmanero.vercel.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_AR" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Fonts were loaded through @import inside a <style> tag in the body,
+         which blocks rendering and starts far too late. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300..700&display=swap"
+    />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-      </style>
-      <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-      </style>
   </body>
 </html>

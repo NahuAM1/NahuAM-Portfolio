@@ -5,54 +5,60 @@
   align-items: center;
   justify-content: center;
   position: fixed;
-  bottom: 20px;
+  bottom: $space-6;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1000;
+  z-index: 1100;
   width: auto;
-  max-width: 90%;
-  animation: fadeIn 0.3s ease-in-out;
+  max-width: min(90%, 460px);
+}
 
-  .snackbar-container-error,
-  .snackbar-container-success {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 15px;
-    border-radius: 50px;
+.snackbar {
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+  padding: $space-3 $space-5;
+  border-radius: $radius-pill;
+  border: 1px solid transparent;
+  box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.8);
+  animation: snackbar-in $duration-base $ease-out;
+
+  &--success {
+    color: #0d2a0a;
     background-color: $color10;
-    .snackbar-icon{
-        padding: 0px;
-        margin: 0px;
-    }
-    .snackbar-text{
-        padding: 0px;
-        margin: 0px;
-        font-weight: bold;
-    }
+    border-color: rgba(255, 255, 255, 0.24);
   }
 
-  .snackbar-container-error {
+  &--error {
+    color: #2a0a0a;
     background-color: $color9;
-  }
-
-  .snackbar-container-success {
-    background-color: $color10;
-  }
-
-  .snackbar-icon {
-    margin-right: 8px;
+    border-color: rgba(255, 255, 255, 0.24);
   }
 }
 
-/* Animación de desvanecimiento */
-@keyframes fadeIn {
+.snackbar-icon {
+  display: inline-flex;
+  align-items: center;
+
+  svg {
+    font-size: 20px;
+  }
+}
+
+.snackbar-text {
+  margin: 0;
+  font-family: $family-body;
+  font-size: $font-small;
+  font-weight: 600;
+}
+
+@keyframes snackbar-in {
   from {
     opacity: 0;
-    transform: translateX(-50%) translateY(10px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
   }
 }

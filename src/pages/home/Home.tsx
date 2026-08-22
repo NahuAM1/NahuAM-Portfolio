@@ -9,9 +9,15 @@ const Home = () => {
   return (
     <div className='home-container'>
       <Resume />
+      <div className='section-divider'>
+        <hr />
+      </div>
       <AboutMeHome />
       <Projects />
       <ExperienceComponent />
+      <div className='section-divider'>
+        <hr />
+      </div>
       <ContactMe />
     </div>
   );

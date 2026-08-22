@@ -18,24 +18,30 @@ const ResumeAbout = () => {
   };
 
   return (
-    <div className='resumeAbout-container'>
-      <div className='resumeAbout-title'>Acerca De Mi</div>
+    <section className='resumeAbout-container' data-reveal>
+      <div className='resumeAbout-aside'>
+        <p className='section-eyebrow'>Quién soy</p>
+        <h1 className='section-title'>Acerca De Mí</h1>
+      </div>
       <div className='resumeAbout-resume'>
         <p className='resumeAbout-resume-title'>
-          Dejame contarte un poco mas de mi:
+          Dejame contarte un poco más de mí:
         </p>
         <p className='resumeAbout-resume-text'>
           Soy una persona apasionada por el deporte, disfruto ver series y jugar
           a videojuegos. Amo pasar tiempo al aire libre, practicando pádel y
           artes marciales. Viajar es una de mis grandes pasiones, y mi lugar
-          favorito en el mungo es la Patagonia Argentina.
-          <br />
+          favorito en el mundo es la Patagonia Argentina.
+        </p>
+        <p className='resumeAbout-resume-text'>
           Me encantan los animales, la tecnología y siempre estoy al tanto de
           las últimas innovaciones.
-          <br />
+        </p>
+        <p className='resumeAbout-resume-text'>
           Valoro mucho pasar tiempo con mis amigos y mi familia, ya que esos
           momentos compartidos son muy importantes para mí.
-          <br />
+        </p>
+        <p className='resumeAbout-resume-text'>
           Profesionalmente, mi propósito es convertirme en un Ingeniero en
           Sistemas de Información respetado y confiable, reconocido por mi
           profesionalismo y habilidades técnicas. Aspiro a alcanzar la libertad
@@ -66,9 +72,9 @@ const ResumeAbout = () => {
         </div>
       </div>
       {showSnackbar && (
-        <SnackBar text={'CV descargado con exito!'} severity={'success'} />
+        <SnackBar text={'CV descargado con éxito!'} severity={'success'} />
       )}
-    </div>
+    </section>
   );
 };
 

@@ -1,36 +1,69 @@
 @import "../../shared/styles-variables.scss";
-.button-template-container{
-    display: flex;
-            align-items: center;
-    .button-template{
-        padding: 10px;
-        border: none;
-        border-radius: 20px;
-        font-family: "Inter", sans-serif;
-        font-weight: 600;
-        color: $color5;
-        background-color: $buttonBackgroundColor;
-        transition: 0.1s;
-        cursor: pointer;
 
-    }
-    .button-template:hover{
-        background-color: $buttonBackgroundColorHover;
-        color: $color2;
-    }
-    
-    .button-template:active{
-        background-color: $buttonBackgroundColorActive;
-        color: $color2;
-    }
-    
-    .button-template:disabled{
-        background-color: $buttonBackgroundColorDisable;
-    }
+.button-template-container {
+  display: inline-flex;
+  align-items: center;
 }
 
-@media (max-width: 767px) { 
-    .button-template{
-        font-size: large;
-    }
+.button-template {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: $space-3 $space-6;
+  font-family: $family-body;
+  font-size: $font-small;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  color: $color5;
+  background-color: $accent;
+  border: 1px solid transparent;
+  border-radius: $radius-pill;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color $duration-fast $ease-out,
+    transform $duration-fast $ease-out, box-shadow $duration-base $ease-out;
+  @include focus-ring;
+
+  // Sheen that sweeps across on hover. Pure decoration, so it is
+  // pointer-transparent and sits behind nothing that matters.
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      120deg,
+      transparent 20%,
+      rgba(255, 255, 255, 0.55) 50%,
+      transparent 80%
+    );
+    transform: translateX(-120%);
+    transition: transform $duration-slow $ease-out;
+    pointer-events: none;
+  }
+
+  &:hover {
+    background-color: $accent-strong;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px -10px rgba(211, 233, 122, 0.55);
+  }
+
+  &:hover::before {
+    transform: translateX(120%);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+
+  &:disabled {
+    background-color: $buttonBackgroundColorDisable;
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
 }

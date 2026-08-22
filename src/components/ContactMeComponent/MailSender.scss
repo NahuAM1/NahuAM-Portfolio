@@ -1,62 +1,86 @@
 @import "../../shared/styles-variables.scss";
-.emailSender-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .emailSender-form-control{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        width: 350px;
-        
-        .emailSender-form-input{
-            height: 30px;
-            border: none;
-            padding: 0px 10px 0px 10px;
-            border-radius: 8px;
-            background-color: $color6;
-            color: $color3;
-            font-family: "Inter";
-            font-weight: 300;
-            transition: 0.1s;
 
-            &:focus {
-                border: solid 2px;
-                border-color: $color2;
-                outline: none;
-            }
-        }
+.emailSender-container {
+  @include surface($radius-xl);
+  padding: clamp($space-5, 3vw, $space-7);
+  // Cards should not lift on hover when they hold a form: the movement
+  // fights the cursor while the user is aiming at a field.
+  transition: border-color $duration-base $ease-out;
 
-
-        .emailSender-form-textarea{
-            border: none;
-            border-radius: 8px;
-            padding: 5px 10px 5px 10px;
-            background-color: $color6;
-            color: $color3;
-            font-family: "Inter";
-            font-weight: 300;
-            transition: 0.1s;
-            resize: none;
-
-            &:focus {
-                border: solid 2px;
-                border-color: $color2;
-                outline: none;
-            }
-        }
-    }
+  &:focus-within {
+    border-color: $border-strong;
+  }
 }
 
-// Media queries for mobile devices
-@media (max-width: 767px) {
-    .emailSender-container {
-        .emailSender-form-control {
-            .emailSender-form-input,
-            .emailSender-form-textarea {
-                font-size: 16px; // Ajusta el tamaño de fuente para una mejor legibilidad en móviles
-                padding: 8px; // Añade padding para un mejor espaciado en móviles
-            }
-        }
-    }
+.emailSender-form-control {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  // Replaces the fixed `width: 350px`, which overflowed its column on
+  // small screens and looked stranded on large ones.
+  width: 100%;
+}
+
+.emailSender-field {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+}
+
+.emailSender-label {
+  font-family: $family-body;
+  font-size: $font-eyebrow;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $text-muted;
+}
+
+.emailSender-form-input,
+.emailSender-form-textarea {
+  width: 100%;
+  padding: $space-3 $space-4;
+  font-family: $family-body;
+  // 16px minimum stops iOS Safari from zooming the viewport on focus.
+  font-size: 1rem;
+  font-weight: 300;
+  color: $text-primary;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid $border;
+  border-radius: $radius-md;
+  transition: border-color $duration-fast $ease-out,
+    background-color $duration-fast $ease-out, box-shadow $duration-fast $ease-out;
+
+  &::placeholder {
+    color: $text-muted;
+  }
+
+  &:hover {
+    border-color: $border-strong;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.04);
+    border-color: $accent;
+    // A ring instead of a thicker border: changing border-width would
+    // shift the element's box and nudge the layout on every focus.
+    box-shadow: 0 0 0 3px rgba(211, 233, 122, 0.16);
+  }
+
+  // Only flags a field the user has actually filled in and left invalid,
+  // never an untouched empty one.
+  &:not(:placeholder-shown):invalid {
+    border-color: $color9;
+  }
+}
+
+.emailSender-form-textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.emailSender-form-control .button-template {
+  width: 100%;
+  margin-top: $space-2;
 }

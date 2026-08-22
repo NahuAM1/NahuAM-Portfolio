@@ -1,52 +1,83 @@
 @import "../../shared/styles-variables.scss";
-.aboutMeComponent-container{
-    display: flex;
-    justify-content: center;
-    padding: 0px 100px 0px 100px;
 
-    .aboutMeComponent-title{
-        font-family: "Bebas Neue";
-        font-style: normal;
-        font-size: 80px;
-        color: $color3;
-    }
-
-    .aboutMeComponent-resume{
-        width: 500px;
-        text-align: justify;
-        font-family: "Inter";
-        color: $color3;
-        margin-left: 200px;
-
-        .aboutMeComponent-resume-title{
-            font-weight: 600;
-        }
-        .aboutMeComponent-resume-text{
-            font-weight: 300;
-        }
-        
-    }
-
+.aboutMeComponent-container {
+  @include section;
+  display: grid;
+  // Replaces `margin-left: 200px` on the text block, which pushed the
+  // column off-centre on narrow desktops and did nothing on mobile.
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: start;
+  gap: clamp($space-6, 6vw, $space-9);
 }
 
-// Media queries para dispositivos móviles
-@media (max-width: 767px) {
-    .aboutMeComponent-container {
-        flex-direction: column;
-        padding: 20px;
-        align-items: start;
-        .aboutMeComponent-title {
-            font-size: 40px;
-        }
+.aboutMeComponent-aside {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  // Keeps the heading beside the text while the paragraphs scroll past.
+  position: sticky;
+  top: calc(#{$nav-height} + #{$space-6});
+}
 
-        .aboutMeComponent-resume {
-            width: auto;
-            margin-left: 0;
-            text-align: justify;
+.aboutMeComponent-resume {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  max-width: 68ch;
+}
 
-            .aboutMeComponent-resume-title {
-                font-size: 20px;
-            }
-        }
-    }
+.aboutMeComponent-resume-title {
+  font-family: $family-body;
+  font-size: $font-body-lg;
+  font-weight: 600;
+  color: $text-primary;
+  margin: 0;
+}
+
+.aboutMeComponent-resume-text {
+  @include body-text;
+  margin: 0;
+}
+
+.aboutMeComponent-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: $space-2;
+  margin-top: $space-3;
+  padding-bottom: $space-1;
+  font-family: $family-body;
+  font-size: $font-small;
+  font-weight: 600;
+  color: $accent;
+  text-decoration: none;
+  border-bottom: 1px solid $border-accent;
+  transition: gap $duration-fast $ease-out, color $duration-fast $ease-out,
+    border-color $duration-fast $ease-out;
+  @include focus-ring;
+
+  svg {
+    font-size: 16px;
+    transition: transform $duration-base $ease-out;
+  }
+
+  &:hover {
+    gap: $space-3;
+    color: $accent-strong;
+    border-bottom-color: $accent;
+  }
+
+  &:hover svg {
+    transform: translate(2px, -2px);
+  }
+}
+
+@media (max-width: 900px) {
+  .aboutMeComponent-container {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .aboutMeComponent-aside {
+    position: static;
+  }
 }

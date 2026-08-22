@@ -4,29 +4,22 @@ import { projects, Project } from '../../shared/Projects.ts';
 
 const Projects = () => {
   return (
-    <div className='projects-container'>
-      <div className='projects-text-container'>
-        <div className='projects-title'>Proyectos Destacados</div>
-        <p className='projects-text'>
+    <section className='projects-container' id='proyectos' data-reveal>
+      <header className='section-header'>
+        <p className='section-eyebrow'>Portfolio</p>
+        <h2 className='section-title'>Proyectos Destacados</h2>
+        <p className='section-lead'>
           Estos son algunos de los proyectos seleccionados que muestran mi
           compromiso y gusto por el desarrollo de software.
         </p>
-      </div>
+      </header>
+
       <div className='projects-cards-container'>
         {projects.map((project: Project) => (
-          <ProjectCard
-            name={project.name}
-            description={project.description}
-            image={project.image}
-            year={project.year}
-            role={project.role}
-            technologies={project.technologies}
-            demo={project.demo}
-            repository={project.repository}
-          />
+          <ProjectCard key={project.name} {...project} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -13,11 +13,12 @@ const projects: Project[] = [
   {
     name: 'Gestión de Modulo Sanitario (GMS)',
     description:
-      'Proyecto Final de la carrera de Ingenieria en Sitemas de Información. Plataforma de gestión para la ONG Módulo Sanitario. Permite la planificación, análisis, asignación, construcción y control de módulos sanitarios para familias de bajos recursos de la ciudad de Córdoba. Incluyendo la generación de formularios, reportes, métricas para la toma de decisiones gestión de agenda y mapa interactivo.',
+      'Proyecto final de la carrera de Ingeniería en Sistemas de Información, defendido con una calificación de 10.\nPlataforma de gestión para la ONG Módulo Sanitario, que trabaja sobre la emergencia habitacional y sanitaria que afecta a más de 6 millones de personas en Argentina. El sistema permite planificar, analizar, asignar, construir y controlar módulos sanitarios para familias de bajos recursos de Córdoba.\nIncluye módulos públicos y privados, generación de formularios, gestión de archivos, reportes y métricas para la toma de decisiones, agenda y mapa interactivo. El objetivo fue liberar a la organización de la carga administrativa para que pueda enfocarse en acompañar a las familias.',
     image: 'https://i.postimg.cc/3whB45T2/Sin-t-tulo.png',
     year: '2024',
     role: 'Desarrollador Back-End y DevOps & Cloud',
-    technologies: 'NestJS, React, Auth0, TypeScript, AWS y Github Actions',
+    technologies:
+      'NestJS, React, MongoDB, TypeScript, Docker, Auth0, AWS y GitHub Actions',
     demo: 'https://gmscordoba.com.ar/',
     repository: null,
   },
@@ -35,11 +36,12 @@ const projects: Project[] = [
   {
     name: 'Personal Wallet',
     description:
-      'Este proyecto comenzó como un experimento creando una wallet de finanzas personales con v0.dev y Supabase. Lo que al principio fue un prototipo generado en minutos fue evolucionando con el tiempo gracias a iteraciones continuas y al uso de asistentes de codificación agéntica para mejorar su arquitectura y funcionalidades.\n Hoy la aplicación ya no es solo una prueba de concepto. Incorpora gestión de gastos con tarjetas de crédito (cierres y vencimientos), seguimiento de financiaciones e inversiones, dashboard de mercado en tiempo real, metas de ahorro y sistema de roles de usuario.\n Además, integra una capa de inteligencia artificial que permite cargar gastos automáticamente mediante fotos de tickets, generar recomendaciones basadas en los últimos consumos, dividir gastos compartidos y contar con un agente financiero 24/7 para analizar, proyectar y optimizar decisiones.\n La experiencia confirma que el verdadero diferencial ya no está únicamente en escribir código, sino en saber diseñar buena arquitectura y orquestar herramientas, servicios e inteligencia artificial para transformar una idea en un producto robusto y escalable.',
+      'Nació como un experimento con v0.dev y Supabase: un prototipo de wallet de finanzas personales generado en minutos. Tras meses de iteración con asistentes de codificación agéntica, dejó de ser una prueba de concepto para convertirse en un producto completo.\nHoy incluye gestión de gastos con tarjetas de crédito (cierres y vencimientos), seguimiento de inversiones, dashboard de mercado en tiempo real, metas de ahorro y sistema de roles de usuario.\nSobre esa base sumé una capa de inteligencia artificial: carga automática de gastos a partir de la foto del ticket, recomendaciones de compra basadas en el análisis de los últimos 50 tickets, divisor de gastos compartidos y un agente financiero disponible 24/7 para analizar, proyectar y optimizar decisiones.\nLa conclusión que me dejó: el diferencial ya no está en la cantidad de código que escribís, sino en diseñar buena arquitectura y orquestar herramientas, servicios e IA para que un prototipo se sostenga como producto real.',
     image: 'https://i.postimg.cc/QtNKYzwg/Sin-titulo.png',
     year: '2025',
-    role: 'Prompt Engineer',
-    technologies: 'v0.dev, ChatGPT, Supabase',
+    role: 'Arquitectura y desarrollo asistido por IA',
+    technologies:
+      'Next.js, Supabase, v0.dev, IA generativa, agentes de codificación y Vercel',
     demo: 'https://personal-finance-wallet.vercel.app',
     repository: 'https://github.com/NahuAM1/personal-finance-app',
   },
