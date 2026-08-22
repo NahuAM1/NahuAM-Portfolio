@@ -16,20 +16,20 @@ const experience: Experience[] = [
     page: 'https://www.alkemy.org/',
     image:
       'https://media.licdn.com/dms/image/v2/D4D0BAQG_ZY153logsA/company-logo_200_200/company-logo_200_200/0/1714918712803/alkemy2020_logo?e=2147483647&v=beta&t=NeBeUgZO4WlpK_6rQ9fj_iQCyCgDj3uCKcQXVe3jI2Y',
-    timeInit: 'Abril 2025',
+    timeInit: 'Febrero 2025',
     timeEnd: null,
-    role: 'Desarrollador Full-Stack',
-    technologies: 'Nest JS, TypeScript, React, Vue, AWS, Auth0',
+    role: 'Ingeniero de Software',
+    technologies: 'Nest JS, TypeScript, React, Vue, C#, AWS, LLMs, Auth0',
   },
   {
     name: 'Tech House',
     linkedIn: 'https://www.linkedin.com/company/tech-house-tech/',
     page: 'https://tech-house.tech/',
     image: 'https://i.postimg.cc/xdSHdf39/tech-house-tech-logo.jpg',
-    timeInit: 'Noviembre 2024',
-    timeEnd: 'Enero 2025',
+    timeInit: 'Diciembre 2024',
+    timeEnd: 'Febrero 2025',
     role: 'Pasante Desarrollador Web',
-    technologies: 'Next JS, TypeScript, React',
+    technologies: 'Next JS, React, TypeScript, Firebase',
   },
 ];
 

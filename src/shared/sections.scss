@@ -1,0 +1,86 @@
+// ============================================================
+// Shared section primitives.
+// Imported once from main.tsx so these rules are emitted a single
+// time. Importing them from each component stylesheet instead would
+// duplicate the output in the bundle, once per importer.
+// ============================================================
+@import "./styles-variables.scss";
+
+// ---- Scroll reveal ----
+// Driven by useScrollReveal: elements marked [data-reveal] start
+// slightly lowered and transparent, then settle as they enter view.
+// This replaced the full-screen intro loader.
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s $ease-out, transform 0.7s $ease-out;
+  // Hints the compositor without leaving layers pinned after the run.
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+  will-change: auto;
+}
+
+// Never leave content invisible if the observer cannot run.
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $space-4;
+  max-width: 62ch;
+  margin-bottom: clamp($space-6, 5vw, $space-8);
+}
+
+.section-eyebrow {
+  @include eyebrow;
+  margin: 0;
+
+  // Short accent rule before the label - a common landing-page cue
+  // that a new section has started.
+  &::before {
+    content: "";
+    width: 24px;
+    height: 1px;
+    background-color: $accent;
+  }
+}
+
+.section-title {
+  @include section-title;
+}
+
+.section-lead {
+  @include body-text;
+  font-size: $font-body-lg;
+  margin: 0;
+}
+
+// Thin separator between major sections.
+.section-divider {
+  @include container;
+
+  hr {
+    height: 1px;
+    margin: 0;
+    border: none;
+    // Fades at both ends instead of butting into the page edges.
+    background: linear-gradient(
+      to right,
+      transparent,
+      $border 20%,
+      $border 80%,
+      transparent
+    );
+  }
+}

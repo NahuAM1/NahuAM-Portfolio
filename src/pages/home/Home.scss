@@ -1,5 +1,6 @@
-.home-container{
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
+@import "../../shared/styles-variables.scss";
+
+.home-container {
+  display: flex;
+  flex-direction: column;
 }

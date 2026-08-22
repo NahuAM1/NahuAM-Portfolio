@@ -1,27 +1,46 @@
-.topButton-container {
-    position: fixed;
-    bottom: 40px;
-    right: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: opacity 0.3s, visibility 0.3s;
-  
-    &.hidden {
-      opacity: 0;
-      visibility: hidden;
-    }
-  
-    &.visible {
-      opacity: 1;
-      visibility: visible;
-    }
+@import "../../shared/styles-variables.scss";
+
+.topButton {
+  position: fixed;
+  bottom: clamp($space-5, 4vw, $space-7);
+  right: clamp($space-5, 4vw, $space-7);
+  z-index: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  color: $text-secondary;
+  background-color: rgba(14, 14, 15, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid $border;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity $duration-base $ease-out,
+    visibility $duration-base $ease-out, transform $duration-base $ease-out,
+    color $duration-fast $ease-out, border-color $duration-fast $ease-out;
+  @include focus-ring;
+
+  svg {
+    font-size: 20px;
   }
 
-@media (max-width: 767px) {
-    .topButton-container{
-        bottom: 20px;
-    }
+  &:hover {
+    color: $accent;
+    border-color: $border-accent;
+  }
+
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+  }
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
 }
-  

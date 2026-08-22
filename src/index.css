@@ -1,24 +1,74 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Keeps anchored sections clear of the fixed navbar. */
+  scroll-padding-top: 96px;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
-  font-family: "Manrope", sans-serif;
+  font-family: "Inter", "Manrope", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 200;
+  font-weight: 300;
   font-style: normal;
-  background-color: rgb(8, 8, 8);
+  color: #ffffff;
+  background-color: #080808;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Stops horizontal jitter from decorative glows that bleed
+     past the viewport edge. */
+  overflow-x: hidden;
 }
+
+img,
+video {
+  max-width: 100%;
+}
+
+/* Respect the OS-level reduced-motion setting. Vestibular
+   disorders make large scroll animations genuinely painful. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+::selection {
+  background-color: #d3e97a;
+  color: #000000;
+}
+
 body::-webkit-scrollbar {
   width: 10px;
 }
 
 body::-webkit-scrollbar-track {
-  background: #1A1A1A;
+  background: #0e0e0f;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #575757; 
+  background-color: #2e2e2e;
   border-radius: 8px;
-  border: 2px solid #1A1A1A;
+  border: 2px solid #0e0e0f;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #454545;
 }

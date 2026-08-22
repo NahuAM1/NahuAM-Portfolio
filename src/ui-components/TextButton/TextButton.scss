@@ -1,32 +1,44 @@
 @import "../../shared/styles-variables.scss";
 
-.text-button-a {
-    .text-button-container {
-        display: flex;
-        align-items: center;
-        color: $color2;
-        font-weight: 600;
-        margin: 0px;
-        transition: 0.1s;
-        gap: 5px;
-        text-decoration: underline $color2;
+.text-button {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  font-family: $family-body;
+  font-size: $font-eyebrow;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: $accent;
+  text-decoration: none;
+  transition: color $duration-fast $ease-out, gap $duration-fast $ease-out;
+  @include focus-ring;
 
-        &:hover{
-            color: $color1;
-            text-decoration: underline $color1;
-        }
+  svg {
+    font-size: 16px;
+    transition: transform $duration-base $ease-out;
+  }
+
+  &:hover {
+    color: $accent-strong;
+    gap: $space-3;
+  }
+
+  // The arrow leans toward where the link is taking you.
+  &:hover svg {
+    transform: translate(2px, -2px);
+  }
+
+  &--disabled {
+    color: $text-muted;
+    cursor: not-allowed;
+
+    &:hover {
+      color: $text-muted;
+      gap: $space-2;
     }
-    .text-button-container-empty {
-        display: flex;
-        align-items: center;
-        color: $color7;
-        font-weight: 600;
-        margin: 0px;
-        transition: 0.1s;
-        gap: 5px;
-        text-decoration: underline $color7;
-        &:hover{
-            cursor: not-allowed;
-        }
+
+    &:hover svg {
+      transform: none;
     }
+  }
 }

@@ -1,6 +1,10 @@
-.contactMe-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 100px;
+@import "../../shared/styles-variables.scss";
+
+.contactMe-container {
+  display: flex;
+  flex-direction: column;
+  // Keeps the standalone contact route from collapsing to the height of
+  // the form alone on tall screens.
+  min-height: calc(100svh - #{$nav-height});
+  justify-content: center;
 }
